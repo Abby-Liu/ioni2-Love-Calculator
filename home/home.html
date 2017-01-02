@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="pink">
+    <ion-title>Love Calculator</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h6 text-center>
+        <ion-icon ios="ios-bowtie" md="md-bowtie" color="pink"></ion-icon>
+        <ion-icon ios="ios-bowtie" md="md-bowtie" color="pink"></ion-icon>
+        <ion-icon ios="ios-bowtie" md="md-bowtie" color="pink"></ion-icon><br>
+請輸入兩個人的名字，查看你們的契合度喲
+</h6>
+    <ion-list>
+    <ion-item>
+      <ion-label floating>Name1</ion-label>
+      <ion-input type="text" [(ngModel)]="name1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Name2</ion-label>
+      <ion-input type="text" [(ngModel)]="name2"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-card text-center>
+
+  <ion-card-header>
+    {{ name1||'???' }} <ion-icon name="heart" color="danger"></ion-icon> {{ name2||'???' }}
+  </ion-card-header>
+
+  <ion-card-content class="score">
+    {{ score }}%
+  </ion-card-content>
+</ion-card>
+    {{ msg }}
+</ion-content>
